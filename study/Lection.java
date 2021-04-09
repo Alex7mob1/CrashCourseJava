@@ -1,4 +1,4 @@
-package crashCourseSoftServe;
+package crashCourseSoftServe.study;
 
 import java.util.*;
 import java.util.stream.Collectors;

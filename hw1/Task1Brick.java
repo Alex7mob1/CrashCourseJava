@@ -1,4 +1,4 @@
-package crashCourseSoftServe;
+package crashCourseSoftServe.hw1;
 
 public class Task1Brick {
     public static void main(String[] args) {

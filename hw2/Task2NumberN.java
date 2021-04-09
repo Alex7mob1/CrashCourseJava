@@ -1,4 +1,4 @@
-package crashCourseSoftServe;
+package crashCourseSoftServe.hw2;
 
 public class Task2NumberN {
     public static void main(String[] args) {

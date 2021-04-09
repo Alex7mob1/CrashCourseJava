@@ -1,4 +1,4 @@
-package crashCourseSoftServe;
+package crashCourseSoftServe.hw3;
 
 import java.util.Scanner;
 
