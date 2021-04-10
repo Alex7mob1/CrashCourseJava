@@ -16,6 +16,39 @@ public class Task3ConsoleApp {
                 System.out.println(personalInformation());
                 break;
 
+            case 3:
+
+                Call ukraine = new Call(10, 20, "Ukr");
+                System.out.println(ukraine);
+                ukraine.printSum();
+
+                Call usa = new Call(30, 5, "Usa");
+                System.out.println(usa);
+                usa.printSum();
+
+                Call german = new Call(20, 30, "Ger");
+                System.out.println(german);
+                german.printSum();
+
+
+                System.out.println("Do you want choose sum? \n yes or no");
+                String choose = scan.next();
+                if (choose.equals("no")) {
+                    break;
+                } else if (choose.equals("yes")) {
+                    double[] sums = {ukraine.sum(), usa.sum(), german.sum()};
+                    double totalSum = 0;
+                    for (double sum : sums) {
+                        totalSum = totalSum + sum;
+                    }
+                    System.out.println("Total sum = " + totalSum);
+                } else {
+                    System.out.println("incorrect");
+                }
+
+
+                break;
+
             default:
                 throw new IllegalArgumentException();
         }

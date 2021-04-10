@@ -18,7 +18,7 @@ public class Task4Person {
     }
 
     public Task4Person(int birthdayYear) {
-        this.name = "null";
+        this.name = "empty";
         this.birthdayYear = birthdayYear;
     }
 
@@ -33,63 +33,36 @@ public class Task4Person {
         this.currentYear = currentYear;
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getBirthdayYear() {
-        return birthdayYear;
-    }
-
-    public void setBirthdayYear(int birthdayYear) {
-        this.birthdayYear = birthdayYear;
-    }
-
-    public int getCurrentYear() {
-        return currentYear;
-    }
-
-    public void setCurrentYear(int currentYear) {
-        this.currentYear = currentYear;
-    }
-
     @Override
     public String toString() {
-        System.out.println("Person{ " + this.name + ", Age = " + this.birthdayYear + ", CurY = " + this.currentYear + '}');
-        return "Person{" + '}';
+        return "Person{ " + this.name + ", Age = " + this.birthdayYear + ", CurY = " + this.currentYear + '}';
     }
 
-    public void outPut() {
+    public void output() {
         System.out.println("values (" + this.name + ", birth = " + this.birthdayYear + ", cur = " + this.currentYear);
     }
 
     public void age() {
-        setBirthdayYear(currentYear - birthdayYear);
+        this.birthdayYear = currentYear - birthdayYear;
     }
 
-    public void inPut() {
+    public void input() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your name: ");
-        String newName = sc.nextLine();
-        setName(newName);
+        this.name = sc.nextLine();
+
         System.out.println("Enter current year: ");
-        int newCurYer = sc.nextInt();
-        setCurrentYear(newCurYer);
+        this.currentYear = sc.nextInt();
+
         System.out.println("Enter your birth year: ");
-        int newBirthYer = sc.nextInt();
-        setBirthdayYear(newBirthYer);
+        this.birthdayYear = sc.nextInt();
     }
 
     public String changeName() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Change your name: ");
-        String newName = sc.nextLine();
-        setName(newName);
-        return newName;
+        this.name = sc.nextLine();
+
+        return this.name;
     }
 }
